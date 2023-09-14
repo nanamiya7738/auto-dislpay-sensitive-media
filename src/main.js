@@ -18,7 +18,6 @@ function displaySensitiveMedia() {
 
 window.addEventListener("load", () => {
     setInterval(() => {
-        console.log("check");
         displaySensitiveMedia();
     }, 1000);
 });
