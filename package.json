@@ -1,20 +1,32 @@
 {
   "name": "auto-dislpay-sensitive-media",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "This extension automatically displays sensitive media.",
   "private": true,
   "scripts": {
-    "watch": "node ./node_modules/webpack/bin/webpack.js --mode=development --watch --config config/webpack.config.js",
-    "build": "node ./node_modules/webpack/bin/webpack.js --mode=production --config config/webpack.config.js"
+    "build": "set NODE_ENV=production&& webpack --mode=production --config config/webpack.config.js",
+    "watch": "set NODE_ENV=development&& webpack --mode=development --watch --config config/webpack.config.js"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.246",
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^0.10.1",
     "size-plugin": "^2.0.2",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^4.10.0",
     "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "prettier": "^3.0.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none"
   }
 }
