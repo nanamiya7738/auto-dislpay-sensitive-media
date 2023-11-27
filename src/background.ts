@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV == "development")
   console.log("ADSM: background process start.....")
 
-const targetUrl = "https://tweetdeck.twitter.com/"
+const targetUrl = ["https://tweetdeck.twitter.com/", "https://pro.twitter.com/"]
 
 chrome.tabs.onUpdated.addListener(
   (
@@ -12,7 +12,7 @@ chrome.tabs.onUpdated.addListener(
     if (
       changeInfo.status === "complete" &&
       tab.url &&
-      tab.url.indexOf(targetUrl) > -1
+      targetUrl.includes(tab.url)
     ) {
       if (process.env.NODE_ENV == "development")
         console.log(`ADSM: loading complete ${tab.url}`)
