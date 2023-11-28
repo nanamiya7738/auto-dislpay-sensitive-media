@@ -19,9 +19,7 @@ export default class Filter {
 
     const timelineHeader = this.timelineData.timelineNode.children
       .item(0)
-      ?.querySelector(
-        "div[data-viewportview='true'] > div[data-testid='multi-column-layout-column-content'] > div[data-testid='gryphonColumnSidebarLayout'] > section"
-      )
+      ?.querySelector(querySelector.quaryTimelineHeader)
     if (timelineHeader) {
       return
     }
@@ -33,7 +31,7 @@ export default class Filter {
       .querySelectorAll<HTMLElement>(querySelector.quaryArticleCell)
       .forEach((tweetArticle) => {
         const tweetDetail = tweetArticle.querySelector<HTMLElement>(
-          "article[data-testid='tweet'] div[class='css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-1mi0q7o']"
+          querySelector.quaryTweetDetail
         )
 
         if (tweetDetail?.children && tweetDetail?.children.length <= 3) {

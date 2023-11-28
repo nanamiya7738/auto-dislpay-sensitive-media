@@ -29,9 +29,8 @@ export default class Cell {
     this.timelineData.timelineNode
       .querySelectorAll<HTMLElement>(`${querySelector.quarySensitiveContent}`)
       .forEach((val) => {
-        val.classList.remove("r-l3hqri")
-        val.children.item(0)?.classList.remove("r-yfv4eo")
-        val.children.item(1)?.remove()
+        const item = val.children.item(1) as HTMLElement
+        item.click()
       })
   }
 }
