@@ -35,6 +35,11 @@ export function startProcessAfterRemoveElement(
 }
 
 export function consoleLog(message: string, opt: any | null = null) {
-  if (process.env.NODE_ENV == "development") console.log(`ADSM: ${message}`)
-  if (process.env.NODE_ENV == "development" && opt) console.log(opt)
+  if (process.env.NODE_ENV == "development") {
+    if (opt) {
+      console.log(opt)
+    } else {
+      console.log(`ADSM: ${message}`)
+    }
+  }
 }
