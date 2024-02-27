@@ -1,6 +1,6 @@
 {
   "name": "auto-dislpay-sensitive-media",
-  "version": "0.2.0",
+  "version": "0.3.2",
   "description": "This extension automatically displays sensitive media.",
   "private": true,
   "scripts": {

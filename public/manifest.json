@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "auto-dislpay-sensitive-media",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "This extension automatically displays sensitive media.",
   "background": {
     "service_worker": "background.js",
@@ -13,10 +13,15 @@
         "https://tweetdeck.twitter.com/*",
         "https://pro.twitter.com/*"
       ],
-      "js": ["main.js"]
+      "js": [
+        "main.js"
+      ]
     }
   ],
-  "permissions": ["tabs", "scripting"],
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
   "host_permissions": [
     "https://tweetdeck.twitter.com/*",
     "https://pro.twitter.com/*"
